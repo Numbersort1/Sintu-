@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIP SURESORT</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem 01rem;
+      background: #000;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: gold;
+      margin-bottom: 0.3rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    .join-btn {
+      padding: 1rem 1.8rem;
+      background: gold;
+      color: black;
+      font-weight: bold;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 5s ease;
+    }
+
+    .join-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 80px gold;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .feature-card {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 1rem;
+      text-align: center;
+      border-radius: 15px;
+      border: 1px solid #333;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      position: relative;
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: gold;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card p {
+      font-size: 1.1rem;
+    }
+
+    .reviews-section {
+      padding: 3rem 2rem;
+      background: #111;
+      text-align: center;
+    }
+
+    .reviews-section h2 {
+      color: gold;
+      margin-bottom: 1rem;
+    }
+
+    .review {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      background: #222;
+      border-radius: 15px;
+      border: 1px solid #333;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .review p {
+      font-style: italic;
+      font-size: 1rem;
+      color: #eee;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .footer {
+      background: #111;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .review {
+        margin: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://ibb.co/jkcTvfgt" alt="SURESORT" style="width:180px;height:180px;border-radius:10%;margin-bottom: 0.1rem;">
+    <h1>VIP SURESORT</h1>
+    <p>EARN 200 TO 10K DAILY</p>
+    <a href="https://t.me/+_OaNr81GSRA0YzI1"><button class="join-btn">Join Now</button></a>
+  </header>
+
+  <!-- Features Section with 2x2 Grid -->
+  <section class="highlights">
+    <div class="feature-card">
+      <div class="feature-icon">₹💯</div>
+      <p>PROFIT GURANTEE</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">★🔥</div>
+      <p>HIGH ACCURACY </p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">☑🎉</div>
+      <p>FREE TO JOIN</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚡🏆</div>
+      <p>EXPERT TIPS</p>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews-section">
+    <h2>What Our Members Say</h2>
+    <div id="review" class="review">
+      <div class="stars">★★★★★</div>
+      <p>“I’m Amit. I joined just 5 days ago and recovered all my losses in 2 days! Earned 3x of my investment. Highly recommended!”</p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    Contact: Telegram <a href="https://t.me/KING_SINTU" style="color:gold;">@KING_SINTU</a><br/>
+    © 2025 VIP SURESORT
+  </footer>
+
+  <script>
+    const reviews = [
+      `“I’m Amit. I joined just 5 days ago and recovered all my losses in 2 days! Earned 3x of my investment. Highly recommended!”`,
+      `“VIP SURESORT is the real deal. Honest, clear signals, and fast support!” – Ravi`,
+      `“Made 9K in a week. Never expected trading could be this easy!” – Priya`,
+      `“Finally found a reliable Telegram group for color trading. Thanks to VIP SURESORT!” – Sunil`,
+      `“Joined for free, earned for real. Best decision!” – Kajal`
+    ];
+
+    let index = 0;
+    setInterval(() => {
+      const reviewBox = document.getElementById("review");
+      reviewBox.classList.remove("fadeIn");
+      setTimeout(() => {
+        reviewBox.innerHTML = `<div class="stars">★★★★★</div><p>${reviews[index]}</p>`;
+        reviewBox.classList.add("fadeIn");
+        index = (index + 1) % reviews.length;
+      }, 200);
+    }, 10000);
+  </script>
+
+</body>
+</html>
